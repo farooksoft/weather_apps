@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:700|Russo+One');
+
+.currentWeather {
+    font-family: 'Noto Sans', sans-serif;
+
+    .cityRow {
+        margin-bottom: 20px;
+        text-align: center;
+
+        @media only screen and (max-height: 730px) {
+            margin-bottom: 0px;
+        }
+
+        .cityName {
+            font-size: 30px;
+        }
+    }
+
+    .weatherRow {
+        margin: 0px 80px 0px !important;
+        text-align: center;
+
+        & > div {
+            margin-top: 15px;
+        }
+
+        .tempContainer {
+
+            .temp {
+                display: block;
+                font-family: 'Russo One', sans-serif;
+                font-size: 35px;
+                margin-top: 0px !important;
+            }
+
+            @media only screen and (max-height: 675px) {
+                display: inline-block;
+            }
+        }
+
+        .descriptionContainer {
+            .icon {
+                display: block;
+                font-size: 60px;
+            }
+
+            .description {
+                display: block;
+                font-size: 20px;
+                margin-top: 10px
+            }
+
+            @media only screen and (max-height: 675px) {
+                display: inline-block;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            margin: 0px 15px 0px !important;
+        }
+    }
+}
+

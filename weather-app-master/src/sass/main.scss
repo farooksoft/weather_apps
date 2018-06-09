@@ -1,0 +1,143 @@
+$primaryColor: #efefef;
+$dayInfoColor: #dedede;
+$borderRadius: 3px;
+
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $primaryColor;
+  max-width: 600px;
+  padding: 10px 20px;
+  margin: 5% auto;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+.weather-app {
+  border: 1px solid darken($primaryColor, 15%);
+  border-radius: $borderRadius;
+  padding: 10px;
+  background-color: darken($primaryColor, 12%);
+}
+
+.day-infos {
+  padding: 0 2.5%;
+  margin: 0 auto;
+  background-color: $dayInfoColor;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.day-infos, .main-info {
+  padding: 10px 0 10px 10px;	
+  border-radius: $borderRadius;
+  margin-bottom: 5px;
+}
+
+.main-info, .day-infos:nth-of-type(2n + 1) {
+  background-color: $dayInfoColor;
+}
+
+.day-infos:nth-of-type(2n) {
+  background-color: lighten($dayInfoColor, 5%);;
+}
+
+.day-info {
+  width: 33.33%;
+  float: left;
+}
+
+.main-info-search {
+  display: inline-block;
+  height: 24px;
+  border-radius: $borderRadius;
+  padding: 2px 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.ajax-loader-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
+
+.ajax-loader {
+	background-image: url(../imgs/circle.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+}
+
+.main-info-data {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-info-middle {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+}
+
+.main-info-middle div:nth-of-type(1) {
+	margin-left: 10px;
+}
+
+.main-info-middle div:nth-of-type(3) {
+	margin-left: 30px;
+}
+
+.main-info-further {
+	clear: both;
+	font-weight: 700;
+}
+
+.main-info-further span {
+	margin-left: 30px;
+}
+
+.input-pair:first-of-type {
+	margin: 5px 10px 25px;
+}
+
+.main-info-data > div {
+	margin-bottom: 20px;
+}
+
+.main-info-city-name {
+	font-size: 1.5rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.day-info-name, .day-info-temperature, .day-info {
+	text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+    .main-info-further {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main-info-further span {
+    	display: block;
+    	text-align: center;
+    }
+
+    .main-info-further span:first-of-type {
+    	margin-bottom: 10px;
+    }    
+}
